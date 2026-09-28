@@ -1,0 +1,30 @@
+Assess the chatbot/live chat widget on this website based on crawl data and HTML signals.
+
+Website URL: {website_url}
+
+Business profile:
+{business_profile}
+
+Chatbot detection summary:
+{chatbot_summary}
+
+Chatbot signals (welcome messages, launcher labels, script URLs):
+{chatbot_signals}
+
+Page content:
+{page_context}
+
+Evaluate the chatbot from crawl-visible cues only (no live interaction).
+
+Return JSON with:
+- design_rating: one of good, fair, poor (launcher visibility, placement, branding consistency)
+- response_readiness: one of good, fair, poor (welcome message quality, proactive help, FAQ routing signals)
+- design_notes: string (1-2 sentences on design/UX findings)
+- response_notes: string (1-2 sentences on response/help readiness)
+- gaps: array of objects (optional extra issues found), each with:
+  - check: string (machine-readable id, e.g. chatbot_poor_design)
+  - severity: one of low, medium, high, critical
+  - description: string (specific issue)
+  - page_url: string (URL or "site-wide")
+
+Return valid JSON only. No markdown.

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='osm_ingest_fixture'>
+  <node id='1' lat='52.5200' lon='13.4050' version='1' timestamp='2024-01-01T00:00:00Z'>
+    <tag k='shop' v='bakery'/>
+    <tag k='name' v='Fixture Bakery'/>
+    <tag k='website' v='https://bakery.example'/>
+  </node>
+  <node id='2' lat='52.5210' lon='13.4060' version='1' timestamp='2024-01-01T00:00:00Z'>
+    <tag k='amenity' v='bench'/>
+  </node>
+  <node id='3' lat='52.5220' lon='13.4070' version='1' timestamp='2024-01-01T00:00:00Z'>
+    <tag k='amenity' v='restaurant'/>
+    <tag k='name' v='Fixture Restaurant'/>
+  </node>
+  <node id='10' lat='52.5230' lon='13.4080' version='1'/>
+  <node id='11' lat='52.5231' lon='13.4081' version='1'/>
+  <node id='12' lat='52.5230' lon='13.4082' version='1'/>
+  <node id='13' lat='52.5229' lon='13.4081' version='1'/>
+  <way id='100' version='1' timestamp='2024-01-01T00:00:00Z'>
+    <nd ref='10'/>
+    <nd ref='11'/>
+    <nd ref='12'/>
+    <nd ref='13'/>
+    <nd ref='10'/>
+    <tag k='building' v='retail'/>
+    <tag k='name' v='Fixture Store'/>
+    <tag k='shop' v='clothes'/>
+  </way>
+</osm>

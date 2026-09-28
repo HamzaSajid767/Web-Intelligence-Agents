@@ -1,0 +1,31 @@
+Identify concrete website pain points from the business profile and crawl data.
+
+Website URL: {website_url}
+
+Business profile:
+{business_profile}
+
+Crawl summary:
+{crawl_summary}
+
+Pre-detected SEO gaps (rule-based):
+{seo_gaps}
+
+Pre-detected chatbot gaps (rule-based):
+{chatbot_gaps}
+
+Chatbot detected: {chatbot_detected}
+
+Structured site signals:
+{structured_context}
+
+Categories only: seo, trust, conversion, content.
+Return at most 4 pain points. Keep evidence small (page_url + one short field).
+
+When SEO gaps exist, include at least one seo pain point.
+When chatbot gaps exist, include at least one conversion pain point.
+
+{chatbot_instructions}
+
+Return valid JSON only matching this shape:
+{json_shape}

@@ -1,0 +1,201 @@
+# OSM business tag taxonomy for worldwide extraction.
+# Keys listed under include_keys match any non-empty value.
+# Keys under value_filters use allow or deny semantics.
+
+include_keys:
+  - shop
+  - office
+  - craft
+  - healthcare
+  - company
+  - club
+
+# Keys that always match when present (any value), plus filtered keys below.
+value_filters:
+  amenity:
+    mode: deny
+    # Non-business amenities frequently mapped worldwide.
+    values:
+      - toilets
+      - toilet
+      - bench
+      - waste_basket
+      - waste_disposal
+      - recycling
+      - parking
+      - parking_entrance
+      - parking_space
+      - bicycle_parking
+      - motorcycle_parking
+      - drinking_water
+      - water_point
+      - fountain
+      - hunting_stand
+      - shelter
+      - bbq
+      - watering_place
+      - grit_bin
+      - clock
+      - post_box
+      - letter_box
+      - telephone
+      - atm
+      - vending_machine
+      - charging_station
+      - compressed_air
+      - device_charging_station
+      - public_bookcase
+      - give_box
+      - parcel_locker
+      - luggage_locker
+      - bicycle_repair_station
+      - watering_place
+      - animal_shelter
+      - animal_boarding
+      - watering_place
+      - feeding_place
+      - dog_toilet
+      - sanitary_dump_station
+      - shower
+      - kneipp_water_cure
+      - lounger
+      - picnic_table
+      - fireplace
+      - hut
+      - ranger_station
+      - mountain_rescue
+      - emergency_phone
+      - siren
+      - traffic_calming
+      - loading_dock
+      - ferry_terminal
+      - boat_rental
+      - boat_sharing
+      - car_sharing
+      - bicycle_rental
+      - scooter_rental
+      - taxi
+      - bus_station
+      - bus_stop
+      - trolley_bay
+
+  tourism:
+    mode: deny
+    values:
+      - information
+      - viewpoint
+      - picnic_site
+      - camp_pitch
+      - wilderness_hut
+      - alpine_hut
+      - artwork
+      - yes
+
+  leisure:
+    mode: allow
+    values:
+      - fitness_centre
+      - sports_centre
+      - bowling_alley
+      - adult_gaming_centre
+      - escape_game
+      - amusement_arcade
+      - water_park
+      - miniature_golf
+      - golf_course
+      - ice_rink
+      - stadium
+      - sports_hall
+      - dance
+      - hackerspace
+      - indoor_play
+      - trampoline_park
+      - beach_resort
+      - marina
+      - sauna
+      - tanning_salon
+      - horse_riding
+      - climbing
+      - paintball
+      - laser_tag
+
+  industrial:
+    mode: allow_if_named
+    values: []
+
+  man_made:
+    mode: allow
+    values:
+      - works
+      - wastewater_plant
+      - gasometer
+      - tower
+      - chimney
+
+  building:
+    mode: allow_if_named
+    values:
+      - commercial
+      - retail
+      - office
+      - industrial
+      - warehouse
+      - hotel
+      - kiosk
+      - supermarket
+      - civic
+      - public
+
+  landuse:
+    mode: allow_if_named
+    values:
+      - retail
+      - commercial
+      - industrial
+      - quarry
+      - farmland
+      - orchard
+      - vineyard
+      - plant_nursery
+
+# osmium tags-filter expressions (nwr = nodes, ways, relations).
+# Keep referenced objects so way/relation geometries can be built.
+osmium_expressions:
+  - nwr/shop
+  - nwr/office
+  - nwr/craft
+  - nwr/healthcare
+  - nwr/company
+  - nwr/club
+  - nwr/amenity
+  - nwr/tourism
+  - nwr/leisure
+  - nwr/industrial
+  - nwr/man_made=works
+  - nwr/building=commercial
+  - nwr/building=retail
+  - nwr/building=office
+  - nwr/building=industrial
+  - nwr/building=warehouse
+  - nwr/building=hotel
+  - nwr/building=kiosk
+  - nwr/building=supermarket
+  - nwr/landuse=retail
+  - nwr/landuse=commercial
+  - nwr/landuse=industrial
+
+# Preference order when multiple business keys exist on one object.
+primary_key_priority:
+  - shop
+  - office
+  - craft
+  - healthcare
+  - amenity
+  - tourism
+  - leisure
+  - company
+  - club
+  - industrial
+  - man_made
+  - building
+  - landuse

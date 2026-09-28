@@ -1,0 +1,24 @@
+Analyze this business website from the crawl data below.
+
+Website URL: {website_url}
+
+Crawl summary:
+{crawl_summary}
+
+Page content (URLs, titles, meta tags, headings, and text):
+{page_context}
+
+Based only on the evidence above, extract the business profile. Use headings, meta tags, and page content as supporting evidence.
+
+If the crawl evidence is thin, contradictory, or does not clearly identify the business, set industry to "Unknown", leave services empty, and set confidence below 0.3. Never invent an industry (for example Accounting) without direct textual support.
+
+Return JSON with exactly these keys:
+- industry: string (specific industry or niche, or "Unknown")
+- services: array of strings (products or services offered)
+- target_audience: string (who this business serves)
+- value_proposition: string (what makes this business valuable to customers)
+- confidence: number from 0 to 1
+- evidence_urls: array of page URLs from the crawl that support the profile
+
+Be specific. Do not guess beyond what the content supports.
+Return valid JSON only. No markdown.

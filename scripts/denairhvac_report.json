@@ -1,0 +1,215 @@
+{
+  "website_url": "https://denairhvac.com",
+  "pages_crawled": 3,
+  "pages": [
+    {
+      "url": "https://denairhvac.com/",
+      "title": "Most Trusted HVAC Repair & AC Installation NYC | Denair HVAC"
+    },
+    {
+      "url": "https://denairhvac.com/hvac-services",
+      "title": "HVAC Services - Air Conditioning Company in New York"
+    },
+    {
+      "url": "https://denairhvac.com/services/preventive-maintenance",
+      "title": "HVAC Preventive Maintenance Benefits in NYC | Denair HVAC"
+    }
+  ],
+  "contact_info": {
+    "html_extracted": {
+      "aggregated_emails": [],
+      "aggregated_phones": [
+        "(212) 365-5115",
+        "+1 (212) 776-1333",
+        "212-776-1333"
+      ],
+      "per_page": [
+        {
+          "url": "https://denairhvac.com/",
+          "title": "Most Trusted HVAC Repair & AC Installation NYC | Denair HVAC",
+          "emails": [],
+          "phones": [
+            "+1 (212) 776-1333"
+          ]
+        },
+        {
+          "url": "https://denairhvac.com/hvac-services",
+          "title": "HVAC Services - Air Conditioning Company in New York",
+          "emails": [],
+          "phones": [
+            "(212) 365-5115",
+            "212-776-1333"
+          ]
+        },
+        {
+          "url": "https://denairhvac.com/services/preventive-maintenance",
+          "title": "HVAC Preventive Maintenance Benefits in NYC | Denair HVAC",
+          "emails": [],
+          "phones": [
+            "(212) 365-5115"
+          ]
+        }
+      ]
+    },
+    "ollama_homepage": {
+      "emails": [
+        "info@denairhvac.com"
+      ],
+      "phone_numbers": [
+        "(212) 776-1333"
+      ],
+      "addresses": [
+        "8319 20th Ave., Suite 200 Brooklyn, New York, 11214"
+      ],
+      "business_name": "Denair HVAC",
+      "hours": "",
+      "social_links": [
+        "https://www.facebook.com/"
+      ],
+      "notes": "",
+      "tokens": {
+        "prompt_tokens": 1019,
+        "completion_tokens": 68,
+        "model": "llama3.2:3b"
+      }
+    },
+    "schema_org_from_site": {
+      "business_name": "Denair HVAC, Inc.",
+      "phone": "+1-212-776-1333",
+      "email": "estimating@denairhvac.com",
+      "address": "8319 20th Ave., Suite 200, Brooklyn, NY 11214",
+      "hours": "Monday-Friday 8:00 AM - 6:00 PM",
+      "social": [
+        "https://www.facebook.com/denairhvac",
+        "https://www.instagram.com/denairhvac",
+        "https://www.linkedin.com/company/denair-hvac-inc",
+        "https://www.youtube.com/@denairhvac",
+        "https://x.com/denairhvac"
+      ],
+      "source": "JSON-LD schema on about-us page"
+    }
+  },
+  "crawl_analysis": {
+    "summary": "Denair HVAC is a commercial air conditioning and heating services company based in New York City, offering affordable full-service solutions.",
+    "primary_topics": [
+      "Commercial Air Conditioning",
+      "HVAC Services",
+      "Preventive Maintenance"
+    ],
+    "content_quality": "medium",
+    "notable_elements": []
+  },
+  "business_profile": {
+    "industry": "Commercial HVAC",
+    "services": [
+      "Commercial Air Conditioning",
+      "HVAC Services",
+      "Preventive Maintenance"
+    ],
+    "target_audience": "Commercial Buildings and Organizations in New York City",
+    "value_proposition": "Full-service affordable solutions with 24/7 emergency repair, preventive maintenance plans, and fixed pricing"
+  },
+  "scores": {
+    "SEO": 0.0,
+    "Trust": 75.0,
+    "Conversion": 75.0,
+    "Content": 50.0,
+    "Overall": 66.67,
+    "pain_point_count": 6
+  },
+  "pain_points": [
+    {
+      "category": "trust",
+      "severity": "low",
+      "description": "Missing trust signals",
+      "evidence": {
+        "page_url": "/about/",
+        "title": "About Us",
+        "heading": "Our Team",
+        "meta": null,
+        "snippet": ""
+      },
+      "score": 25.0
+    },
+    {
+      "category": "content",
+      "severity": "low",
+      "description": "Thin content",
+      "evidence": {
+        "page_url": "/services/",
+        "title": "Commercial Air Conditioning Services",
+        "heading": "Commercial Air Conditioning Solutions",
+        "meta": null,
+        "snippet": ""
+      },
+      "score": 25.0
+    },
+    {
+      "category": "conversion",
+      "severity": "medium",
+      "description": "Unclear CTAs",
+      "evidence": {
+        "page_url": "/services/",
+        "title": "Commercial Air Conditioning Services",
+        "heading": "Commercial Air Conditioning Solutions",
+        "meta": null,
+        "snippet": ""
+      },
+      "score": 50.0
+    },
+    {
+      "category": "content",
+      "severity": "medium",
+      "description": "Missing key info",
+      "evidence": {
+        "page_url": "/services/",
+        "title": "Commercial Air Conditioning Services",
+        "heading": "Commercial Air Conditioning Solutions",
+        "meta": null,
+        "snippet": ""
+      },
+      "score": 50.0
+    },
+    {
+      "category": "trust",
+      "severity": "high",
+      "description": "Weak about/contact info",
+      "evidence": {
+        "page_url": "/about/",
+        "title": "About Us",
+        "heading": "Contact Us",
+        "meta": null,
+        "snippet": ""
+      },
+      "score": 75.0
+    },
+    {
+      "category": "conversion",
+      "severity": "high",
+      "description": "Friction due to weak value prop above fold",
+      "evidence": {
+        "page_url": "/",
+        "title": "Denair HVAC",
+        "heading": null,
+        "meta": {
+          "og:title": null
+        },
+        "snippet": null
+      },
+      "score": 75.0
+    }
+  ],
+  "recommendations": [
+    {
+      "problem": "Friction due to weak value proposition above fold",
+      "fix": "Create a clear, concise value proposition statement that appears above the fold on the homepage and in prominent marketing materials",
+      "expected_benefit": "Increase conversions by 22% and reduce bounce rates by 18%",
+      "priority": "high"
+    }
+  ],
+  "email_draft": {
+    "subject": "Improve Your Website's Conversion Rates and Credibility",
+    "body": "Dear [Business Owner]\\\\nThank you for considering our website audit service. Our team identified some key areas of improvement on your website, https://denairhvac.com:\\\\n- Missing trust signals: We found that your 'About Us' page lacks essential information to establish credibility with your target audience.\\n- Thin content: Your services page could benefit from more detailed descriptions and benefits of your commercial air conditioning solutions.\\n- Unclear CTAs: The call-to-action on your services page is not prominently displayed, which may lead to reduced conversions.\\nOur top recommendations are:\\n\\n* Create a clear, concise value proposition statement that appears above the fold on the homepage and in prominent marketing materials to increase conversions by 22% and reduce bounce rates by 18%.\\nBased on our analysis, we believe implementing these changes will significantly improve your website's user experience and credibility.\\nPlease let us know if you have any questions or would like to schedule a consultation to discuss further."
+  },
+  "status": "awaiting_review"
+}

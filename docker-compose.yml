@@ -1,0 +1,179 @@
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6380:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # Local Ollama — started when COMPOSE_PROFILES=local-ollama
+  # (set that in .env when OLLAMA_USE_REMOTE=false)
+  ollama:
+    image: ollama/ollama:latest
+    container_name: web-intelligence-ollama
+    profiles:
+      - local-ollama
+    ports:
+      - "11434:11434"
+    environment:
+      # CPU-only Ollama has one fixed pool of cores. Left unset, Ollama
+      # accepts multiple generate requests in parallel and time-slices the
+      # CPU between them, which collapses per-request token throughput
+      # (observed dropping to ~2-3 tok/s under QUEUE_WORKERS>1 load instead
+      # of ~15-25 tok/s). Forcing NUM_PARALLEL=1 makes Ollama queue requests
+      # and run them one at a time with the full CPU, which is faster in
+      # aggregate even though requests wait their turn.
+      OLLAMA_NUM_PARALLEL: ${OLLAMA_NUM_PARALLEL:-1}
+      OLLAMA_MAX_LOADED_MODELS: ${OLLAMA_MAX_LOADED_MODELS:-1}
+    volumes:
+      - ollama_data:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 20s
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6335:6333"
+      - "6336:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+  # PostGIS for worldwide OSM business ingest (osm_ingest package)
+  postgis:
+    image: postgis/postgis:16-3.4
+    ports:
+      - "${POSTGIS_PORT:-5433}:5432"
+    environment:
+      POSTGRES_USER: ${POSTGIS_USER:-osm}
+      POSTGRES_PASSWORD: ${POSTGIS_PASSWORD:-osm}
+      POSTGRES_DB: ${POSTGIS_DB:-osm_businesses}
+    volumes:
+      - postgis_data:/var/lib/postgresql/data
+      - ./docker/init-postgis.sql:/docker-entrypoint-initdb.d/01-init-postgis.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGIS_USER:-osm} -d ${POSTGIS_DB:-osm_businesses}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  colly-sidecar:
+    build: ./colly-sidecar
+    ports:
+      - "8081:8081"
+    environment:
+      COLLY_SIDECAR_HOST: 0.0.0.0
+      COLLY_SIDECAR_PORT: 8081
+      COLLY_SIDECAR_TIMEOUT: 20
+      # Optional fallback if request body omits proxy (Python also sends proxy per-request).
+      HTTP_PROXY: ${WEBCLAW_PROXY:-}
+      HTTPS_PROXY: ${WEBCLAW_PROXY:-}
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "-", "http://localhost:8081/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  webclaw:
+    build: ./webclaw
+    container_name: webclaw
+    ports:
+      - "3010:3000"
+    environment:
+      WEBCLAW_HOST: 0.0.0.0
+      WEBCLAW_PORT: 3000
+      WEBCLAW_ALLOW_OPEN_PUBLIC: "1"
+      # When PROXY_ENABLED=true, set WEBCLAW_PROXY in .env to the same proxy URL.
+      WEBCLAW_PROXY: ${WEBCLAW_PROXY:-}
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O - http://localhost:3000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/1
+      QDRANT_URL: http://qdrant:6333
+      COLLY_URL: http://colly-sidecar:8081
+      WEBCLAW_BASE_URL: http://webclaw:3000
+      # Containers reach compose Ollama by service name (used when OLLAMA_USE_REMOTE=false).
+      OLLAMA_LOCAL_URL: http://ollama:11434
+      # Mongo comes from env_file (.env). IN_DOCKER rewrites localhost → host.docker.internal.
+      IN_DOCKER: "1"
+    depends_on:
+      redis:
+        condition: service_healthy
+      qdrant:
+        condition: service_started
+      colly-sidecar:
+        condition: service_healthy
+      webclaw:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
+        required: false
+    networks:
+      - default
+      - voice-calling
+    volumes:
+      - .:/app
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  worker:
+    build: .
+    env_file:
+      - .env
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/1
+      QDRANT_URL: http://qdrant:6333
+      COLLY_URL: http://colly-sidecar:8081
+      WEBCLAW_BASE_URL: http://webclaw:3000
+      # Containers reach compose Ollama by service name (used when OLLAMA_USE_REMOTE=false).
+      OLLAMA_LOCAL_URL: http://ollama:11434
+      # Mongo comes from env_file (.env). IN_DOCKER rewrites localhost → host.docker.internal.
+      IN_DOCKER: "1"
+    depends_on:
+      redis:
+        condition: service_healthy
+      qdrant:
+        condition: service_started
+      colly-sidecar:
+        condition: service_healthy
+      webclaw:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
+        required: false
+    networks:
+      - default
+      - voice-calling
+    volumes:
+      - .:/app
+    command: celery -A app.tasks.celery_app worker -l info
+
+volumes:
+  qdrant_data:
+  ollama_data:
+  postgis_data:
+
+networks:
+  voice-calling:
+    external: true
+    name: voice-calling-agent-noor_default

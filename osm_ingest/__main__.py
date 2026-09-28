@@ -1,0 +1,6 @@
+"""python -m osm_ingest.cli …"""
+
+from osm_ingest.cli import main
+
+if __name__ == "__main__":
+    raise SystemExit(main())

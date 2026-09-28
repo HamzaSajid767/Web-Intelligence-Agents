@@ -1,0 +1,34 @@
+Write a personalized outreach email for a website audit prospect.
+
+Website URL: {website_url}
+
+Business profile:
+{business_profile}
+
+Top pain points found:
+{pain_points}
+
+Top SEO gaps found:
+{seo_gaps}
+
+Top chatbot findings:
+{chatbot_gaps}
+
+Top recommendations:
+{recommendations}
+
+Requirements:
+- Reference specific findings from the audit (mention actual issues by name)
+- When SEO gaps are present, mention at least one specific SEO issue and its fix
+- When chatbot gaps or missing live chat are present, mention at least one chatbot-related finding
+- Do NOT use generic marketing language or vague claims
+- Keep the email body under 200 words
+- Professional, consultative tone
+- If SEO score is above 0, the subject should reference SEO opportunities
+- This is a draft for human review — do not mention automatic sending
+
+Return JSON with exactly these keys:
+- subject: string (specific, not generic)
+- body: string (full email body, under 200 words)
+
+Return valid JSON only. No markdown.

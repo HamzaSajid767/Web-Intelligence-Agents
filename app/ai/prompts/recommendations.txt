@@ -1,0 +1,34 @@
+Generate actionable website improvement recommendations based on the pain points below.
+
+Website URL: {website_url}
+
+Business profile:
+{business_profile}
+
+Pain points (highest priority):
+{pain_points}
+
+Pre-detected SEO gaps:
+{seo_gaps}
+
+Pre-detected chatbot gaps:
+{chatbot_gaps}
+
+Opportunity scores:
+{scores}
+
+Provide up to {max_recommendations} recommendations, prioritizing high-severity issues first.
+Every recommendation MUST address a specific pain point from the list (reference its check name or description).
+Do not invent issues. Do not add generic filler advice.
+When SEO gaps are listed above, include at least one recommendation that addresses a specific SEO issue.
+When chatbot gaps are listed above, include at least one recommendation that addresses chatbot or live chat.
+Keep each field concise (1-2 sentences).
+
+Return JSON with key "recommendations" as an array of objects, each with:
+- problem: string (the specific issue being addressed)
+- fix: string (concrete action to take)
+- expected_benefit: string (measurable or clear business benefit)
+- priority: one of low, medium, high
+- source_check: string (pain point check id when available, else empty string)
+
+Return valid JSON only. No markdown.

@@ -1,0 +1,480 @@
+{
+  "total_sites": 7,
+  "sites": [
+    {
+      "website_url": "https://figliasons.com",
+      "pages_crawled": 5,
+      "errors": [],
+      "aggregated": {
+        "emails": [
+          "sales@figliasons.com",
+          "you@company.com",
+          "you@example.com"
+        ],
+        "phones": [
+          "(201) 446-6925",
+          "(202) 506-0617",
+          "(212) 254-8372",
+          "(212) 555-0100",
+          "(212) 555-0123",
+          "(212) 686-0094",
+          "(335) 374-2331",
+          "(371) 892-2910",
+          "(375) 631-9018",
+          "(382) 677-1317",
+          "(466) 938-4765",
+          "(512) 841-8898",
+          "(528) 846-3606",
+          "(713) 669-2745",
+          "(719) 397-5080",
+          "(719) 551-1474",
+          "(756) 687-1165",
+          "(791) 666-6666",
+          "(899) 999-9761"
+        ]
+      },
+      "pages": [
+        {
+          "url": "https://figliasons.com/",
+          "title": "Figlia & Sons | NYC's Premier PTAC & HVAC Company Since 1960",
+          "emails": [
+            "sales@figliasons.com",
+            "you@example.com"
+          ],
+          "phones": [
+            "(212) 555-0123",
+            "(212) 686-0094"
+          ]
+        },
+        {
+          "url": "https://figliasons.com/aria",
+          "title": "ARIA by Simon-Aire | Figlia & Sons NYC",
+          "emails": [
+            "sales@figliasons.com"
+          ],
+          "phones": [
+            "(212) 254-8372",
+            "(212) 686-0094"
+          ]
+        },
+        {
+          "url": "https://figliasons.com/docs/pure-spec-sheet.pdf",
+          "title": null,
+          "emails": [],
+          "phones": [
+            "(201) 446-6925",
+            "(202) 506-0617",
+            "(335) 374-2331",
+            "(371) 892-2910",
+            "(375) 631-9018",
+            "(382) 677-1317",
+            "(466) 938-4765",
+            "(528) 846-3606",
+            "(713) 669-2745",
+            "(719) 397-5080",
+            "(719) 551-1474",
+            "(756) 687-1165",
+            "(791) 666-6666",
+            "(899) 999-9761"
+          ]
+        },
+        {
+          "url": "https://figliasons.com/docs/sawsvs-vertical-wshp.pdf",
+          "title": null,
+          "emails": [],
+          "phones": [
+            "(512) 841-8898"
+          ]
+        },
+        {
+          "url": "https://figliasons.com/ptac-installation-nyc",
+          "title": "PTAC Installation NYC | Professional Unit Installation in Manhattan, Bronx & Queens",
+          "emails": [
+            "sales@figliasons.com",
+            "you@company.com"
+          ],
+          "phones": [
+            "(212) 555-0100",
+            "(212) 686-0094"
+          ]
+        }
+      ]
+    },
+    {
+      "website_url": "https://www.klimany.com",
+      "pages_crawled": 5,
+      "errors": [],
+      "aggregated": {
+        "emails": [
+          "Parts@Klimany.com"
+        ],
+        "phones": [
+          "(201) 596-0785",
+          "(219) 773-5472",
+          "(230) 519-5801",
+          "(235) 214-1355",
+          "(254) 535-2419",
+          "(337) 257-8893",
+          "(353) 738-9287"
+        ]
+      },
+      "pages": [
+        {
+          "url": "https://www.klimany.com/",
+          "title": "Commercial HVAC Solutions New York | Klima NY",
+          "emails": [],
+          "phones": [
+            "(201) 596-0785",
+            "(230) 519-5801",
+            "(235) 214-1355",
+            "(254) 535-2419",
+            "(337) 257-8893",
+            "(353) 738-9287"
+          ]
+        },
+        {
+          "url": "https://www.klimany.com/equipment",
+          "title": "Commercial HVAC Equipment New York | Trusted Manufacturers | Klima NY",
+          "emails": [],
+          "phones": [
+            "(201) 596-0785",
+            "(230) 519-5801",
+            "(235) 214-1355",
+            "(254) 535-2419",
+            "(337) 257-8893",
+            "(353) 738-9287"
+          ]
+        },
+        {
+          "url": "https://www.klimany.com/controls",
+          "title": "HVAC Controls Systems New York | Building Automation Solutions | Klima NY",
+          "emails": [],
+          "phones": [
+            "(201) 596-0785",
+            "(230) 519-5801",
+            "(235) 214-1355",
+            "(254) 535-2419",
+            "(337) 257-8893",
+            "(353) 738-9287"
+          ]
+        },
+        {
+          "url": "https://www.klimany.com/projectprofiles",
+          "title": "HVAC Project Profiles New York | Case Studies & Solutions | Klima NY",
+          "emails": [],
+          "phones": [
+            "(219) 773-5472",
+            "(254) 535-2419",
+            "(353) 738-9287"
+          ]
+        },
+        {
+          "url": "https://www.klimany.com/parts",
+          "title": "Commercial HVAC Parts New York | OEM & Replacement Parts | Klima NY",
+          "emails": [
+            "Parts@Klimany.com"
+          ],
+          "phones": [
+            "(201) 596-0785",
+            "(230) 519-5801",
+            "(235) 214-1355",
+            "(254) 535-2419",
+            "(337) 257-8893",
+            "(353) 738-9287"
+          ]
+        }
+      ]
+    },
+    {
+      "website_url": "https://www.perfectcomfort.us",
+      "pages_crawled": 5,
+      "errors": [],
+      "aggregated": {
+        "emails": [],
+        "phones": [
+          "(845) 497-1005",
+          "(845) 497-1006",
+          "(866) 510-4594",
+          "(987) 654-3214"
+        ]
+      },
+      "pages": [
+        {
+          "url": "https://www.perfectcomfort.us/",
+          "title": "Perfect Comfort HVAC Contractor - Orange County NY HVAC Company",
+          "emails": [],
+          "phones": [
+            "(845) 497-1005",
+            "(845) 497-1006",
+            "(987) 654-3214"
+          ]
+        },
+        {
+          "url": "https://www.perfectcomfort.us/financing.php",
+          "title": "Financing - Orange County NY HVAC Installations - Heating & AC Service Payment Options",
+          "emails": [],
+          "phones": [
+            "(845) 497-1005",
+            "(845) 497-1006",
+            "(866) 510-4594",
+            "(987) 654-3214"
+          ]
+        },
+        {
+          "url": "https://www.perfectcomfort.us/estimate.php",
+          "title": "Contact Us: Perfect Comfort, Orange County NY HVAC Contractor",
+          "emails": [],
+          "phones": [
+            "(845) 497-1005",
+            "(845) 497-1006",
+            "(987) 654-3214"
+          ]
+        },
+        {
+          "url": "https://www.perfectcomfort.us/about.php",
+          "title": "About Orange County NY HVAC Contractor | Perfect Comfort Inc.",
+          "emails": [],
+          "phones": [
+            "(845) 497-1005",
+            "(845) 497-1006",
+            "(987) 654-3214"
+          ]
+        },
+        {
+          "url": "https://www.perfectcomfort.us/community-involvement.php",
+          "title": "Community Involvement - Orange County NY HVAC Contractor",
+          "emails": [],
+          "phones": [
+            "(845) 497-1005",
+            "(845) 497-1006",
+            "(987) 654-3214"
+          ]
+        }
+      ]
+    },
+    {
+      "website_url": "https://www.brotherssupply.com",
+      "pages_crawled": 5,
+      "errors": [],
+      "aggregated": {
+        "emails": [],
+        "phones": [
+          "(610) 272-8896",
+          "(610) 277-9661",
+          "(718) 361-8300",
+          "(718) 729-4710",
+          "(800) 762-2660"
+        ]
+      },
+      "pages": [
+        {
+          "url": "https://www.brotherssupply.com/",
+          "title": "Air Conditioning & Heating Parts in New York City - Brothers",
+          "emails": [],
+          "phones": [
+            "(610) 272-8896",
+            "(610) 277-9661",
+            "(718) 361-8300",
+            "(718) 729-4710",
+            "(800) 762-2660"
+          ]
+        },
+        {
+          "url": "https://www.brotherssupply.com/products/",
+          "title": "Commercial Heating and Cooling Products New York - Buy Now",
+          "emails": [],
+          "phones": [
+            "(610) 272-8896",
+            "(610) 277-9661",
+            "(718) 361-8300",
+            "(718) 729-4710",
+            "(800) 762-2660"
+          ]
+        },
+        {
+          "url": "https://www.brotherssupply.com/parts-accessories/",
+          "title": "Reliable HVAC Solutions in New York City | Brothers Supply",
+          "emails": [],
+          "phones": [
+            "(610) 272-8896",
+            "(610) 277-9661",
+            "(718) 361-8300",
+            "(718) 729-4710",
+            "(800) 762-2660"
+          ]
+        },
+        {
+          "url": "https://www.brotherssupply.com/products/type/ptac/",
+          "title": "Packaged Terminal Air Conditioner in NYC | Brothers Supply",
+          "emails": [],
+          "phones": [
+            "(610) 272-8896",
+            "(610) 277-9661",
+            "(718) 361-8300",
+            "(718) 729-4710",
+            "(800) 762-2660"
+          ]
+        },
+        {
+          "url": "https://www.brotherssupply.com/products/type/wshp/",
+          "title": "Water Source Heat Pump in New York - Brothers Supply",
+          "emails": [],
+          "phones": [
+            "(610) 272-8896",
+            "(610) 277-9661",
+            "(718) 361-8300",
+            "(718) 729-4710",
+            "(800) 762-2660"
+          ]
+        }
+      ]
+    },
+    {
+      "website_url": "https://donnellymech.com",
+      "pages_crawled": 5,
+      "errors": [],
+      "aggregated": {
+        "emails": [],
+        "phones": [
+          "(212) 229-0441",
+          "(718) 619-4384",
+          "(718) 886-1500"
+        ]
+      },
+      "pages": [
+        {
+          "url": "https://donnellymech.com/",
+          "title": "Commercial HVAC Mechanical Contractors NYC | Donnelly Mechanical",
+          "emails": [],
+          "phones": [
+            "(212) 229-0441",
+            "(718) 619-4384",
+            "(718) 886-1500"
+          ]
+        },
+        {
+          "url": "https://donnellymech.com/replacements-and-upgrades/",
+          "title": "Turn-Key Replacements and System Upgrades | Donnelly Mechanical",
+          "emails": [],
+          "phones": [
+            "(718) 619-4384",
+            "(718) 886-1500"
+          ]
+        },
+        {
+          "url": "https://donnellymech.com/construction-and-renovations/",
+          "title": "Commercial HVAC Construction in NYC | Donnelly Mechanical",
+          "emails": [],
+          "phones": [
+            "(212) 229-0441",
+            "(718) 619-4384",
+            "(718) 886-1500"
+          ]
+        },
+        {
+          "url": "https://donnellymech.com/financing",
+          "title": "Commercial HVAC On-Bill Financing | Donnelly Mechanical",
+          "emails": [],
+          "phones": [
+            "(718) 619-4384",
+            "(718) 886-1500"
+          ]
+        },
+        {
+          "url": "https://donnellymech.com/commercial-hvac-preventive-maintenance/",
+          "title": "Commercial HVAC Preventative Maintenance | Donnelly Mechanical",
+          "emails": [],
+          "phones": [
+            "(718) 619-4384",
+            "(718) 886-1500"
+          ]
+        }
+      ]
+    },
+    {
+      "website_url": "https://hvacnycpro.com",
+      "pages_crawled": 5,
+      "errors": [],
+      "aggregated": {
+        "emails": [
+          "info@hvacnycpro.com"
+        ],
+        "phones": [
+          "(718) 395-2627",
+          "(718) 790-4446",
+          "(730) 475-1499",
+          "(917) 275-3280",
+          "(999) 999-9999"
+        ]
+      },
+      "pages": [
+        {
+          "url": "https://hvacnycpro.com/",
+          "title": "HVAC Repair, Installation & Service in NYC & Nassau County | Premier HVAC Services",
+          "emails": [],
+          "phones": [
+            "(718) 790-4446",
+            "(730) 475-1499",
+            "(999) 999-9999"
+          ]
+        },
+        {
+          "url": "https://hvacnycpro.com/contact/",
+          "title": "Contact Us | Premier HVAC Services",
+          "emails": [
+            "info@hvacnycpro.com"
+          ],
+          "phones": [
+            "(718) 395-2627",
+            "(718) 790-4446",
+            "(730) 475-1499",
+            "(999) 999-9999"
+          ]
+        },
+        {
+          "url": "https://hvacnycpro.com/about/",
+          "title": "About Us | Premier HVAC Services",
+          "emails": [],
+          "phones": [
+            "(718) 790-4446",
+            "(730) 475-1499",
+            "(917) 275-3280",
+            "(999) 999-9999"
+          ]
+        },
+        {
+          "url": "https://hvacnycpro.com/services/",
+          "title": "Best HVAC Services: Heating, AC, Air Duct & Ventilation | Premier HVAC Services",
+          "emails": [],
+          "phones": [
+            "(718) 790-4446",
+            "(730) 475-1499",
+            "(999) 999-9999"
+          ]
+        },
+        {
+          "url": "https://hvacnycpro.com/service/heating-services/",
+          "title": "24 Hour Heating Services Company in New York City | Premier HVAC Services",
+          "emails": [],
+          "phones": [
+            "(718) 790-4446",
+            "(730) 475-1499",
+            "(999) 999-9999"
+          ]
+        }
+      ]
+    },
+    {
+      "website_url": "https://kaback.com",
+      "pages_crawled": 0,
+      "errors": [
+        "HTTP 502: {\"error\":\"upstream fetch failed: request failed: error sending request for uri (https://kaback.com/): client error (Connect)\"}"
+      ],
+      "aggregated": {
+        "emails": [],
+        "phones": []
+      },
+      "pages": []
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "website_url": "https://denairhvac.com",
+  "pages_crawled": 10,
+  "aggregated": {
+    "emails": [],
+    "phones": [],
+    "addresses": []
+  },
+  "pages": [
+    {
+      "url": "https://denairhvac.com/",
+      "title": "Most Trusted HVAC Repair & AC Installation NYC | Denair HVAC",
+      "html_detected": {
+        "emails": [],
+        "phones": []
+      },
+      "error": "ReadTimeout('')"
+    },
+    {
+      "url": "https://denairhvac.com/hvac-services",
+      "title": "HVAC Services - Air Conditioning Company in New York",
+      "html_detected": {
+        "emails": [],
+        "phones": [
+          "212-776-1333"
+        ]
+      },
+      "error": "ReadTimeout('')"
+    },
+    {
+      "url": "https://denairhvac.com/services/preventive-maintenance",
+      "title": "HVAC Preventive Maintenance Benefits in NYC | Denair HVAC",
+      "html_detected": {
+        "emails": [],
+        "phones": []
+      },
+      "error": "ReadTimeout('')"
+    },
+    {
+      "url": "https://denairhvac.com/hvac-controls",
+      "title": "HVAC CONTROLS | Denair HVAC",
+      "html_detected": {
+        "emails": [],
+        "phones": [
+          "212-776-1333",
+          "577210-1140"
+        ]
+      },
+      "error": "ReadTimeout('')"
+    },
+    {
+      "url": "https://denairhvac.com/hvac-installation",
+      "title": "HVAC Installation | Denair HVAC - Construction",
+      "html_detected": {
+        "emails": [],
+        "phones": []
+      },
+      "error": "ReadTimeout('')"
+    },
+    {
+      "url": "https://denairhvac.com/feeds",
+      "title": "Resource Hub - Denair HVAC",
+      "html_detected": {
+        "emails": [],
+        "phones": [
+          "1772566945"
+        ]
+      },
+      "error": "ReadTimeout('')"
+    },
+    {
+      "url": "https://denairhvac.com/about-us",
+      "title": "HVAC Company in New York - Denair HVAC - ABOUT US",
+      "html_detected": {
+        "emails": [],
+        "phones": []
+      },
+      "error": "ReadTimeout('')"
+    },
+    {
+      "url": "https://denairhvac.com/who-we-are",
+      "title": "HVAC Company in New York - Denair HVAC - ABOUT US",
+      "html_detected": {
+        "emails": [],
+        "phones": []
+      },
+      "error": "1 validation error for PageContactOutput\naddresses.0\n  Input should be a valid string [type=string_type, input_value={'street': '', 'city': ''...'longitude': '-74.0060'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type"
+    },
+    {
+      "url": "https://denairhvac.com/hvac-jobs",
+      "title": "EMPLOYMENT | Denair HVAC Jobs",
+      "html_detected": {
+        "emails": [],
+        "phones": []
+      },
+      "error": "ReadTimeout('')"
+    },
+    {
+      "url": "https://denairhvac.com/subcontractor-opportunities",
+      "title": "SUBCONTRACTOR | Denair HVAC - Opportunities",
+      "html_detected": {
+        "emails": [],
+        "phones": []
+      },
+      "error": "ReadTimeout('')"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+Analyze the crawled website and return a JSON summary.
+
+Website URL: {website_url}
+Pages crawled: {page_count}
+
+Content from crawled pages:
+{content_summary}
+
+Return JSON with exactly these keys:
+- summary: string (2-3 sentence overview of what this business website is about)
+- primary_topics: array of strings (main topics covered on the site)
+- content_quality: string (one of: low, medium, high)
+- notable_elements: array of strings (notable pages, sections, or content patterns)
+
+Return valid JSON only. No markdown.
